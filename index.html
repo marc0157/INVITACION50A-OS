@@ -29,9 +29,6 @@
     transition: transform 0.5s;
     margin: 0 50px;
   }
-  .gallery img:hover {
-    transform: scale(2);
-  }
   audio {
     position: absolute;
     bottom: 0;
@@ -79,12 +76,8 @@ function showSlides(n) {
 
 var audioPlayer = document.getElementById('audioPlayer');
 document.body.addEventListener('click', function(e) {
-  if (e.target.id !== 'audioPlayer') {
-    if (audioPlayer.paused) {
-      audioPlayer.play();
-    } else {
-      audioPlayer.pause();
-    }
+  if (e.target.id !== 'audioPlayer' && audioPlayer.paused) {
+    audioPlayer.play();
   }
 });
 </script>
