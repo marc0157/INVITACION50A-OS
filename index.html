@@ -2,21 +2,35 @@
 <html>
 <head>
 <style>
+  body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+  }
   .gallery {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
     overflow-x: auto;
+    padding: 50px 0;
+    perspective: 1000px;
+    perspective-origin: 50% 50%;
   }
   .gallery img {
     flex: 0 0 auto;
     width: 600px;
-    height: 600px;
-    object-fit: cover;
-    margin-right: 10px;
-    transition: transform 0.5s ease;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.5s;
+    margin: 0 50px;
   }
   .gallery img:hover {
-    transform: scale(3);
+    transform: scale(2);
   }
 </style>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,8 +44,13 @@
   <img src="4.png" alt="Imagen 4">
   <img src="5.png" alt="Imagen 5">
   <img src="6.png" alt="Imagen 6">
- <img src="7.png" alt="Imagen 7">
+  <img src="7.png" alt="Imagen 7">
 </div>
+
+<audio controls autoplay loop>
+  <source src="MUSICA.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
 
 </body>
 </html>
