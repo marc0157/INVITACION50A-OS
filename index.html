@@ -54,13 +54,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         $(document).ready(function(){
-            var carousel = $('.carousel').carousel({
+            $('.carousel').carousel({
                 padding: 200
             });
             autoplay();
             function autoplay() {
-                carousel.carousel('next');
-                setTimeout(autoplay, 13000); // Cambia este valor a 13000 para un giro de 13 segundos
+                $('.carousel').carousel('next');
+                setTimeout(autoplay, 13000);
             }
             var audio = document.getElementById('myAudio');
             audio.volume = 1.0; // Puedes ajustar el volumen aquí, el valor debe estar entre 0.0 y 1.0
@@ -72,12 +72,7 @@
 
             // Agrega este código para activar y desactivar el zoom con un clic
             $('.carousel .carousel-item img').click(function() {
-                $('.carousel .carousel-item img').removeClass('zoom'); // Remove the 'zoom' class from all images
-                $(this).addClass('zoom'); // Add the 'zoom' class to the clicked image
-            });
-            // Add this code to reset the zoom when the carousel changes
-            $('.carousel').on('carouselNext', function() {
-                $('.carousel .carousel-item img').removeClass('zoom');
+                $(this).toggleClass('zoom');
             });
         });
     </script>
