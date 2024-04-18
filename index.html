@@ -29,9 +29,8 @@
             max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
             transition: transform 0.5s ease; /* Animación suave para el zoom */
         }
-        .carousel .carousel-item:hover img,
-        .carousel .carousel-item:focus img {
-            transform: scale(2); /* Aumenta el tamaño de la imagen en un 400% */
+        .carousel .carousel-item img.zoom {
+            transform: scale(2); /* Aumenta el tamaño de la imagen en un 200% */
         }
         @keyframes animate {
             to {
@@ -70,8 +69,12 @@
                     audio.play();
                 }
             });
+
+            // Agrega este código para activar y desactivar el zoom con un clic
+            $('.carousel .carousel-item img').click(function() {
+                $(this).toggleClass('zoom');
+            });
         });
     </script>
 </body>
 </html>
-
