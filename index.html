@@ -31,7 +31,7 @@
         }
         .carousel .carousel-item:hover img,
         .carousel .carousel-item:focus img {
-            transform: scale(4); /* Aumenta el tamaño de la imagen en un 400% */
+            transform: scale(1.5); /* Aumenta el tamaño de la imagen en un 400% */
         }
         @keyframes animate {
             to {
@@ -64,7 +64,7 @@
                 setTimeout(autoplay, 4500);
             }
             var audio = document.getElementById('myAudio');
-            audio.volume = 0.2; // Puedes ajustar el volumen aquí, el valor debe estar entre 0.0 y 1.0
+            audio.volume = 1.0; // Puedes ajustar el volumen aquí, el valor debe estar entre 0.0 y 1.0
             document.body.addEventListener('touchstart', function() {
                 if (audio.paused) {
                     audio.play();
