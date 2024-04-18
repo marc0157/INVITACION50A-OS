@@ -18,12 +18,13 @@ body {
 .container .box {
   position: relative;
   min-width: 60px;
-  width: 100%; /* Asegúrate de que esto sea responsive */
-  height: 300px; /* O la altura que prefieras */
+  width: 100%;
+  height: 300px;
   overflow: hidden;
   margin: 10px;
-  background-size: cover; /* Cambiado de auto 150% a cover */
-  background-position: center;
+  background-size: contain; /* Asegura que la imagen se ajuste dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center center; /* Centra la imagen de fondo */
   cursor: pointer;
   transition: background-size 1s ease, flex-grow 1s ease;
   border-radius: 50px;
@@ -32,14 +33,14 @@ body {
 
 .container .box:hover {
   flex-grow: 10000;
-  background-size: cover; /* Asegúrate de que esto sea consistente */
+  background-size: contain; /* Mantiene la imagen contenida al pasar el mouse */
   border-radius: 50px;
   transition: all 0.9s ease;
 }
 
 @media only screen and (max-width: 600px) {
   .container .box {
-    min-width: 30px; /* O un tamaño que funcione bien en móviles */
-    height: 200px; /* Altura más pequeña para pantallas más pequeñas */
+    min-width: 30px;
+    height: 200px;
   }
 }
