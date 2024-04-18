@@ -16,6 +16,9 @@
             margin-top: 5%;
         }
         .carousel .carousel-item {
+            display: flex; /* Habilita flexbox */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
             width: 400px;
             height: 500px;
             box-shadow: 0 0 40px #61dafb, 0 0 40px #61dafb, 0 0 40px #61dafb;
@@ -23,14 +26,12 @@
             border-radius: 15px;
         }
         .carousel .carousel-item img {
-            display: block;
-            margin: 0 auto; /* Centra la imagen horizontalmente */
-            width: 100%; /* Ajusta este valor según necesites */
+            max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
             transition: transform 0.5s ease; /* Animación suave para el zoom */
         }
         .carousel .carousel-item:hover img,
         .carousel .carousel-item:focus img {
-            transform: scale(1); /* Aumenta el tamaño de la imagen en un 400% */
+            transform: scale(1.5); /* Aumenta el tamaño de la imagen en un 400% */
         }
         @keyframes animate {
             to {
@@ -65,5 +66,3 @@
     </script>
 </body>
 </html>
->
-
