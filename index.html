@@ -22,7 +22,7 @@
             width: 400px;
             height: 500px;
             box-shadow: 0 0 40px #61dafb, 0 0 40px #61dafb, 0 0 40px #61dafb;
-            animation: animate 8s infinite alternate;
+            animation: animate 10s infinite alternate;
             border-radius: 15px;
         }
         .carousel .carousel-item img {
@@ -61,7 +61,7 @@
             autoplay();
             function autoplay() {
                 $('.carousel').carousel('next');
-                setTimeout(autoplay, 4500);
+                setTimeout(autoplay, 10000);
             }
             var audio = document.getElementById('myAudio');
             audio.volume = 1.0; // Puedes ajustar el volumen aquí, el valor debe estar entre 0.0 y 1.0
