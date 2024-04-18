@@ -60,7 +60,7 @@
             autoplay();
             function autoplay() {
                 $('.carousel').carousel('next');
-                setTimeout(autoplay, 10000);
+                setTimeout(autoplay, 13000); // Cambia este valor a 13000 para un giro de 13 segundos
             }
             var audio = document.getElementById('myAudio');
             audio.volume = 1.0; // Puedes ajustar el volumen aquí, el valor debe estar entre 0.0 y 1.0
@@ -72,7 +72,8 @@
 
             // Agrega este código para activar y desactivar el zoom con un clic
             $('.carousel .carousel-item img').click(function() {
-                $(this).toggleClass('zoom');
+                $('.carousel .carousel-item img').removeClass('zoom'); // Remove the 'zoom' class from all images
+                $(this).addClass('zoom'); // Add the 'zoom' class to the clicked image
             });
         });
     </script>
