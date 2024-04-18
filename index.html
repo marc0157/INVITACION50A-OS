@@ -31,7 +31,7 @@
         }
         .carousel .carousel-item:hover img,
         .carousel .carousel-item:focus img {
-            transform: scale(1.5); /* Aumenta el tamaño de la imagen en un 400% */
+            transform: scale(4); /* Aumenta el tamaño de la imagen en un 400% */
         }
         @keyframes animate {
             to {
@@ -50,6 +50,7 @@
         <a class="carousel-item" href="#six!"><img src="6.png"></a>
         <a class="carousel-item" href="#seven!"><img src="7.png"></a>
     </div>   
+    <audio id="myAudio" src="MUSICA.mp3" preload="auto"></audio>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
@@ -62,7 +63,15 @@
                 $('.carousel').carousel('next');
                 setTimeout(autoplay, 4500);
             }
+            var audio = document.getElementById('myAudio');
+            audio.volume = 0.2; // Puedes ajustar el volumen aquí, el valor debe estar entre 0.0 y 1.0
+            document.body.addEventListener('touchstart', function() {
+                if (audio.paused) {
+                    audio.play();
+                }
+            });
         });
     </script>
 </body>
 </html>
+
