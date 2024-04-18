@@ -24,14 +24,13 @@
         }
         .carousel .carousel-item img {
             display: block;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto; /* Centra la imagen horizontalmente */
             width: 100%; /* Ajusta este valor según necesites */
             transition: transform 0.5s ease; /* Animación suave para el zoom */
         }
         .carousel .carousel-item:hover img,
         .carousel .carousel-item:focus img {
-            transform: scale(1.1); /* Aumenta el tamaño de la imagen en un 10% */
+            transform: scale(4); /* Aumenta el tamaño de la imagen en un 400% */
         }
         @keyframes animate {
             to {
@@ -42,13 +41,13 @@
 </head>
 <body>    
     <div class="carousel">
-        <div class="carousel-item"><img src="1.png"></div>
-        <div class="carousel-item"><img src="2.png"></div>
-        <div class="carousel-item"><img src="3.png"></div>
-        <div class="carousel-item"><img src="4.png"></div>
-        <div class="carousel-item"><img src="5.png"></div>
-        <div class="carousel-item"><img src="6.png"></div>
-        <div class="carousel-item"><img src="7.png"></div>
+        <a class="carousel-item" href="#one!"><img src="1.png"></a>
+        <a class="carousel-item" href="#two!"><img src="2.png"></a>
+        <a class="carousel-item" href="#three!"><img src="3.png"></a>
+        <a class="carousel-item" href="#four!"><img src="4.png"></a>
+        <a class="carousel-item" href="#five!"><img src="5.png"></a>
+        <a class="carousel-item" href="#six!"><img src="6.png"></a>
+        <a class="carousel-item" href="#seven!"><img src="7.png"></a>
     </div>   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -66,3 +65,4 @@
     </script>
 </body>
 </html>
+
