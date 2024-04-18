@@ -1,23 +1,32 @@
 body {
-	margin: 0; 
-	padding: 0;
-	background: #021514;   
+    margin: 0; 
+    padding: 0;
+    background: #021514;   
 }
 .carousel{
     height: 600px; 
     perspective: 400px;
-	margin-top: 5%;
+    margin-top: 5%;
 }
 .carousel .carousel-item {
-	width: 400px;
-	height: 500px;
-	box-shadow: 0 0 40px #61dafb, 0 0 40px #61dafb, 0 0 40px #61dafb;
-	animation: animate 2s infinite alternate;
-	border-radius: 15px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 0 40px #61dafb, 0 0 40px #61dafb, 0 0 40px #61dafb;
+    animation: animate 2s infinite alternate;
+    border-radius: 15px;
 }
-
+.carousel .carousel-item img {
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    width: 100%; /* Ajusta este valor según necesites */
+    transition: transform 0.5s ease; /* Animación suave para el zoom */
+}
+.carousel .carousel-item:hover img,
+.carousel .carousel-item:focus img {
+    transform: scale(4); /* Aumenta el tamaño de la imagen en un 400% */
+}
 @keyframes animate {
     to {
-      box-shadow: 0 0 50px #61dafb, 0 0 50px #61dafb, 0 0 50px #61dafb;
+        box-shadow: 0 0 50px #61dafb, 0 0 50px #61dafb, 0 0 50px #61dafb;
     }
-  }
+}
